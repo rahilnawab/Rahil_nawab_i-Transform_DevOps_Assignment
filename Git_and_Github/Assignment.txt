@@ -1,0 +1,37 @@
+steps for the assignment of Git and Github
+
+mkdir project_dir 
+cd project_dir
+git init
+touch index.html
+git status
+git add index.html
+git commit -m "adding index.html"
+touch info.txt
+git status
+touch .gitignore
+git status
+git add index.html, git commit -m "Initial Commit"
+alias graph="git log --all --decorate --oneline --graph"
+graph
+modify index.html
+git restore index.html
+modify index.html
+git add index.html
+git restore --staged index.html
+git config --global alias.my-add add
+git my-add index.html, git commit -m "changed add command to my-add"
+git revert "last commit hash"
+
+
+
+GIT BRANCHING & GIT REMOTING
+
+For git branching using HTML,CSS and javascript file into master branch
+All the steps are followed as per assignment given and for the git remoting the folder is pushed to the repository name Test_case
+
+
+Link to the repository=           https://github.com/rahilnawab/Test_case
+
+
+
