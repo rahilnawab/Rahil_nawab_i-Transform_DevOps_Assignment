@@ -1,0 +1,19 @@
+The development team in your organization is working on a new Web-based API.
+They have deployed a central server that they intend to use as a local Git repository for source control.
+They have managed to configure some of the global settings for the service account they want to use as the Git user, but are having difficulties in getting started with an empty repository.
+
+As a result, they have provided you with the credentials for the service user and credentials to access their server.
+You have been asked to initialize a new Git repository in the /home/<user-name> directory called 'web-api'.
+
+Once you have this new repository created, create a file called 'README.md' (be careful to mind the case of the file in order to follow your corporate standards for README files) that contains "Web-API v1" text.
+You will then need to add that file to the repository and commit the changes to the repository. Once you confirm that the default branch is up-to-date with no changes to commit, you may turn it back over to the team for use.
+
+
+steps:
+mkdir web-api
+cd web-api
+touch readme.md
+edit the readme.md file with any editor and add "Web-API v1"
+git add .
+git commit -m"up to date"
+git status

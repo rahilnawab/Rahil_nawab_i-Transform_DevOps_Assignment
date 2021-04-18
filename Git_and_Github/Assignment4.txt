@@ -1,0 +1,19 @@
+One of your company's developers noticed that the word readme was mispelled in the web api's git repository readme file.
+
+The company policy dictates that all modifications are to be made in branches, and that these branches are to remain intact and not deleted. until reviewed by a senior developer.
+
+You have been asked to log into the central server used for maintaining the git repository for the web api, which is located in the <user-name>'s home directory, and correct the spelling within the file. You are to use a branch named 'fix-readme', and merge the corrected file back into the master branch when finished.
+Again, do not remove your branch. Once you have completed this task, hand the system over to the lead developer for approval.
+
+steps
+cd web-api
+git status
+git branch fixed-readme
+git checkout fixed-readme
+Edit back the readme file and save it
+git add .
+git commit -m"fixed readme file"
+git status
+git checkout master
+git merge fixed-readme
+git status

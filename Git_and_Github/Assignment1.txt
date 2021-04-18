@@ -1,0 +1,21 @@
+While traveling, you meet an IT professional who writes plays in their spare time. They are working on a play that really resonates with you. Part of the concept of the play is that it is open source. After a spirited discussion on your flight, they tell you about the repository where the play is kept and encourage you to get involved. To contribute, you will first need to install Git and configure it with your name and email address. Once that is done, you need to pull down the repository into /home/<user-name>/play/ on the provided workstation host. Create a new branch named after your first name to begin your piece of the story. Create a new text file with your story and add it to the branch. Also, add your name to the contributers.txt file within your branch. Be sure to track your work with git and commit your changes to your local repository and use the commit message "airplane story" so your travel buddy will remember who you are!
+
+Summary tasks list:
+
+Install and configure git on the provided workstation.
+Clone the repository from https://github.com/satyensingh/content-git-quickstart.git to /home/<user-name>/play and create a new branch for your story.
+Add a new story file to your local repository in your new branch.
+Add an entry to the file contributers.txt in your new branch.
+Commit your changes using the message "airplane story".
+
+
+
+steps
+1.istall git on the system
+2.git clone https://github.com/satyensingh/content-git-quickstart.git
+  git branch new_story
+3. touch new_file.text
+   add .
+4. nano contributers.text
+   add .
+5. commit -m"airplane story"

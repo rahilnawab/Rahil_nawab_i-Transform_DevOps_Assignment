@@ -1,0 +1,63 @@
+In this exercise, you are one of a team of developers. Your team uses feature branches to manage changes.
+You have been asked to make a change to the train-schedule app.
+Instead of the app's main page header reading "Train Schedule," the customer wants it to read “Find your train!” or vice-versa (You may find the text the reverse of what is said so please do the reverse).
+This text can be found in the project file views/index.jade, and you're going to have to change it.
+
+Prerequisites:
+
+A GitHub.com account
+In order to push a change to the code, you will need to:
+
+Install git
+Configure git for ssh authentication with GitHub.com
+Create a personal fork of the sample repository https://github.com/satyensingh/train-schedule-app.git
+Clone your personal fork from GitHub
+Create a feature branch to contain the change
+Change the header text in views/index.jade from “Train Schedule” to “Find your train!”
+Add the change in views/index.jade to the next commit
+Commit the change
+Push the change to the remote scm repository
+Create a pull request to merge the feature branch into the master branch
+Merge the pull request
+
+
+
+Steps:
+install git
+steps for git for ssh authentication with github:
+  mkdir githubkeys
+  cd githubkeys
+  ssh-keygen -t ed25519 -C "nawabrahil@gmail.com"
+  add a secure paraphase
+  Copy the SSH public key to your clipboard.
+  open your repo in your github account
+  In the upper-right corner of any page, click your profile photo, then click Settings.
+  In the user settings sidebar, click SSH and GPG keys.
+  Click New SSH key or Add SSH key.
+  In the "Title" field, add a descriptive label for the new key.
+  Paste your key into the "Key" field.
+  Click Add SSH key.
+  If prompted, confirm your GitHub password.
+
+git clone https://github.com/satyensingh/train-schedule-app.git
+git branch feature-branch
+git checkout feature-branch
+git status
+edit the header text in views/index.jade from “Train Schedule” to “Find your train!”
+git add .
+git commit -m"changes in header"
+git status
+git checkout master
+git remote add upstream  <REMOTE_URL>
+git push origin main
+
+steps to create pull requestOn GitHub, navigate to the main page of the repository.
+  On GitHub, navigate to the main page of the repository.
+  In the "Branch" menu, choose the branch that contains your commits.
+  Above the list of files, click  Pull request.
+  Use the base branch dropdown menu to select the branch you'd like to merge your changes into,
+  Then use the compare branch drop-down menu to choose the topic branch you made your changes in.
+  Type a title and description for your pull request.
+  To create a pull request that is ready for review, click Create Pull Request.
+  To create a draft pull request, use the drop-down and select Create Draft Pull Request, then click Draft Pull Request.
+  After your pull request has been reviewed, it can be merged into the repository 
