@@ -1,0 +1,19 @@
+Write a script intended to iterate through an array called SERVERLIST containing at least four values (server names).
+Display all four values to the terminal when run.
+
+
+
+script
+---->#!/usr/bin/env bash
+     # File: arr.sh
+
+     echo "Type your four server names and then press Enter:"
+     read a b c d
+
+     echo "Name of the array is Serverlist"
+
+     serverlist=($a $b $c $d)
+     echo "All the four server are  ${serverlist[*]}"
+
+
+$ bash arr.sh

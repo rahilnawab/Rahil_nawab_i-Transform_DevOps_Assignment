@@ -1,0 +1,28 @@
+Write a script that sets FOUR variables:
+
+MYUSERNAME
+MYPASSWORD
+STARTOFSCRIPT
+ENDOFSCRIPT
+
+Populate the first two with some default value and use command redirection to set the third and fourth value to the date/time of when the script was started and completed.
+Within the script, be sure to display the values to the terminal when run.
+
+
+SCRIPT:
+---->#!/usr/bin/env bash
+     # File: dat.sh
+
+     echo "Type in a username and then press Enter:"
+     read my_name
+
+     echo "Type in a password and then press Enter:"
+     read pass
+     echo "My username: $my_name"
+     echo "Password: *******"
+
+     date '+DATE: %m/%d/%y%nTIME:%H:%M:%S' > time.txt
+     cat time.txt
+
+
+$ bash dat.sh

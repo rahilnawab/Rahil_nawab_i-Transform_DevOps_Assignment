@@ -1,0 +1,21 @@
+Write a script that runs three commands:
+
+Evaluate an arithmetic expression
+Attempt to remove a file that does not exist in the current directory
+Evaluate another arithmetic expression
+
+
+Immediately after each command, echo the exit status of that command to the terminal using the appropriate variable to show success and failure exit codes.
+
+
+script
+---->#!/usr/bin/env bash
+     # File: arthematic.sh
+
+     expr 6 + 2 && echo "Arthematic equation was executed"
+     rm -r current.txt
+
+     expr 119 - 22 && echo "Another arthematic equation was executed"
+
+
+$bash arthematic.sh

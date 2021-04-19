@@ -1,0 +1,29 @@
+Develop a simple three item menu to display on the terminal.
+Your script, upon display of the menu, should prompt the user to choose one of the three available options.
+Using the 'case' statement from the course, display three unique messages depending on which number they chose, with a catch all message letting them know if they went outside the bounds of instructions.
+
+
+script
+---->#!/usr/bin/env bash
+     # File: stop.sh
+
+     colour=('1=Orange' '2=Green' '3=Red')
+     echo "${colour[@]}"
+     echo "Choose any colour"
+     read colour
+     case $colour in
+     [1])
+     echo "Orange colour means GET Steady"
+     ;;
+     [2])
+     echo "Green colour means GO"
+     ;;
+     [3])
+     echo "Red colour means STOP"
+     ;;
+     *)
+     echo "Unknown colour"
+     ;;
+     esac
+
+$bash stop.sh

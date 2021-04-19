@@ -1,0 +1,20 @@
+Create a script that interacts with the user.
+Prompt them to guess a secret number between 1 and 5.
+Read the guess from the terminal and assign it to a variable.
+Using the 'if' statement from the course, test that value to determine if they guessed the right number (you choose the correct value).
+ If they do, isplay a success message, otherwise do nothing.
+
+ script
+ ---->#!usr/bin/env bash
+      #File:guess.sh
+
+      echo "Guess the number between 1 & 5 and then press Enter:"
+      read v1
+
+      if [[ $v1 -eq 3 ]]
+      then
+	      echo "You entered the correct number"
+	      echo "Program ends"
+      fi
+
+  $ bash guess.sh

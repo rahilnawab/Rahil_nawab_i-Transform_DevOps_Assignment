@@ -1,0 +1,17 @@
+Create a simple text file at the command prompt.
+This file should contain three values - CPU, Memory and Disk space for an imaginary system, all on one line and delimited with a '|' character.
+
+Write a script to read that file and prompt the user for the delimiter value.
+Use that delimiter along with the IFS variable and read those delimited values into three appropriately named variables.
+Finally, display them with labels, one each per line.
+
+create CMD.txt:
+CPU | Memory | Diskspace
+script
+---->#!/usr/bin/env bash
+     while read CPU Memory Diskspace
+     do
+     printf "Central Processing Unit\n" $CPU
+     printf "Memory - X GB\n" $Memory
+     printf "Disk_space - X GB\n" $Diskspace
+     done

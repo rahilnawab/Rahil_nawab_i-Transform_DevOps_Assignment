@@ -1,0 +1,22 @@
+Develop a script that creates, sets and displays two variables to the terminal when run.
+Within this script, add comments to explain what the script is doing, what each variable is and, using inline comments, what each command is doing.
+
+script
+---->#!/usr/bin/env bash
+     # File: var.sh
+
+     echo "Type the first variable name and then press Enter:"  #asking user for first variable name
+     read var
+
+     echo "Type the second variable name and then press Enter:" #asking user for second variable name
+     read varn
+
+     echo "setting vaiarbles"
+     export "$var"                                              #setting the variable
+     export "$varn"                                             #setting the variable
+
+     echo "$var"                                                #displaying the variable
+     echo "$varn"                                               #displaying the variable
+
+
+$bash var.sh

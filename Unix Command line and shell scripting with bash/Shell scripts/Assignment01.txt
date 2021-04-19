@@ -1,0 +1,17 @@
+Create a script that, when run, will display the following environment variables to the console:
+
+USER
+HOME
+HISTCONTROL
+TERM
+
+Script
+--> #!/usr/bin/env bash
+    # File: evni.sh
+
+    printenv USER
+    printenv HOME
+    printenv HISTCONTROL
+    printenv TERM
+
+$ bash envi.sh

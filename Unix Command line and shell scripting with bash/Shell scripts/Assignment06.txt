@@ -1,0 +1,22 @@
+Write a script that evaluates and displays the following arithmetic operations:
+
+Add two numbers
+Add two numbers and multiply by a third, do not group anything
+Add two numbers, grouped (changing order of precedence) and multiply by a third
+
+Keep in mind special characters and/or escape characters as needed.
+
+
+script
+---->#!/usr/bin/env bash
+     # File: multi.sh
+
+     echo "Enter the numbers and then press Enter:"
+     read v1 v2 v3
+
+     expr $v1 + $v2
+     expr $v1 + $v2 \* $v3 | bc -l
+     expr "($v1 + $v2) * $v3" | bc -l
+
+
+  $bash multi.sh
