@@ -1,0 +1,32 @@
+We are going to use nested functions to simulate the kind of abstraction you find in many object oriented languages.
+Create the following structures in your script:
+
+A function that defines two local variables to hole the number of arms and legs that a human being has.
+Nested functions, one for each a male and female, that contain the appropriate number of beards that each gender has.
+Capture the gender as a command line parameter.
+Test the command line parameter and call the appropriate functions in order to display the characteristics of the indicated gender.
+
+script
+---->#!/usr/bin/env bash
+
+     gender () {
+     local arms=2
+     local legs=2
+     f="Female"
+     if [[ $1 == $f ]]
+     then
+        Female;
+     else
+        Male;
+    fi
+    }
+      Female() {
+        echo "Female"
+      }
+
+      Male() {
+        echo "Male"
+      }
+
+      func=$(gender $1)
+      echo "$func"
