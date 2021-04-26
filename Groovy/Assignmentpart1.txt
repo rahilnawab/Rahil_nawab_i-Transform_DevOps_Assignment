@@ -1,0 +1,172 @@
+1. Number data types
+  a. What data type is the number 2? How about 20? 200? Keep adding zeros and watch the data type change until it reaches BigInteger.
+     Then do the same for 2.0.
+--> 2 is integer data types
+    for number 2 to change to biginteger it has to be 20000000000000000000
+    2.0 is bigdecimal data types
+    for 2.0 to be changed to BigInteger we have to remove its decimal part
+
+  b. Declare a variable x of type def and assign it the sum of 1 and 1.5. What is the resulting data type?
+--> resulting datatype is bigdecimal
+
+  c. What do you get when you divide 5 by 2?
+     What is the resulting data type? If you wanted to do integer division (no remainder), what method would you call?
+--> By dividing 5 by 2 we get 2.5 which is bigdecimal datatype.
+    for integer division we use "//" so it has no remainder.
+
+
+2.Wrapper Classes
+  From the associated wrapper classes, find the min and max values for the Java primitives: byte, short, int, long, float, double.
+-->              min_value             max_value
+        byte    -128                  127
+        short   -32768                32768
+        int     -2147483648           2147483647
+        long    -9223372036854775808  9223372036854775807
+        float   4E-45                 4028235E38
+        double  9E-324                7976931348623157E308
+
+
+3.2's Complement
+  Create a byte variable with its maximum value. What do you get when you add 1 to it?
+  -->byte b =127
+     byte c=b+1
+     println c
+     println c.getClass().getName()
+
+   -> result is -128, this happens due to overflows as number next to maximum is the minimun number.
+
+
+4. Strings and GroovyStrings
+
+    a. How many characters are in the string "Hello, Groovy!"?
+    -->String a = "Hello, Groovy!";
+       println(a.length())
+
+    b. Define a string variable containing a name. Print a hello statement with your name using string concatenation, then using a Groovy string.
+      -->def name = 'Rahil'
+         println "My name is " +name
+
+    c. Demonstrate that "racecar" is a palindrome by comparing it to its reverse. Do the same with "Bob", removing case sensitivity first.
+      -->String a = "racecar";
+         String r = "";
+
+         int length = a.length();
+
+         for(int i = length - 1; i >= 0; i --) {
+	           r = r + a.charAt(i);
+         }
+
+         // Case in-sensitive comparision
+         if (a.equalsIgnoreCase(r)) {
+	           System.out.println("The given string is Palindrome");
+         } else {
+	           System.out.println("The given string is NOT a Palindrome");
+         }
+
+    d. Define a string variable containing the sentence, "Hello, World. How are you?". Split the sentence into an array using the split method. Count the number of words. Do the same using the tokenize method.
+      --> Using split  (length of array is 5)
+          def a = "Hello, World. How are you?"
+          def b = a.split(' ')
+          println b
+
+      -->Using tokenize
+         def sampleText = "Hello, World. How are you?"
+         println sampleText.tokenize()
+
+    e. Using the same sentence, use array notation (square brackets) to print the substring "World".
+      -->def a = "Hello, World. How are you?"
+         def b = a.split(' ')
+         println b[1]
+
+    f. Use array notation to print the last word, but reversed.
+      -->def a = "Hello, World. How are you?"
+         def b = a.split(' ')
+         def c = b[4]
+         println (c.reverse())
+
+
+5. Prime Numbers
+   Write a method called isPrime that takes an integer argument and returns a boolean.
+   Determine whether the number is prime by dividing it by all numbers from 2 up to one less than the number.
+   That limit is too high, of course. How high do you have to check to be sure whether you've gone far enough?
+   -->def isPrime(int a)
+      {
+      def i = 1
+      for (i ; i<= a/2; i++)
+      if (a%2 == 0)
+      return false
+      else
+      return true
+      }
+
+      int number = 3
+      s = isPrime(number)
+      if (s.equals(true))
+         	println ('Is a prime number')
+      else
+         	println ('Not a prime number')
+
+
+1.Sorting Strings
+  Create a list of strings. Sort them alphabetically. Sort them by length. Sort them by length in descending order.
+  Advanced: Sort by length, then sort equal length strings alphabetically
+  -->sorted
+     def words = ['groovy', 'is', 'cool']
+     words = words.sort ()
+     println words
+
+    -->sorted by the length of string
+       def words = ['groovy', 'is', 'cool']
+       words = words.sort { it.size() }
+       println words
+
+    -->sorted by the length in descending order
+       def words = ['groovy', 'is', 'cool']
+       words = words.sort { -it.size() }
+       println words
+
+    -->sorting alphabetically
+       def words = ['groovy', 'is', 'cool']
+       words = words.sort(false)
+       println words
+
+
+2. Processing a list of numbers
+   Create a list of numbers. Add them together. First double each number, then add them up. Compute their average.
+  -->list of number and add them together
+     def num1 = [1,2,3]
+     def num2 = [4,5,6]
+     num = num1 + num2
+     def add = num.sum()
+     def add2 = num.sum {it * it}
+     def avg = (add + add2)/2
+     println avg
+
+
+3. Reading a web page
+   Using the Groovy JDK, access your home page and display the source code. Print the length of each line of the home page.
+  -->def urlContents = "https://www.google.com/".toURL().getText()
+     println  urlContents
+
+
+4. Closures as a filter
+   Create a list of numbers. Print all elements greater than zero.
+  -->def num = [-3, -2, -1, 0, 1, 2, 3]
+     println num.findAll { it -> it > 0 }
+
+
+5. Multi-line strings
+   Make a multi-line string. Compute the number of vowels on each line.
+-->def str = """This is an
+         			  multiline string"""
+
+   def  vowels = ['a','e','i','o','u']
+   s = str.split('\n')
+
+   def p1 = s[0]
+   def part1 = p1.findAll { it -> it in vowels  }
+   println part1.size()
+
+   def p2 = s[1]
+   def part2 = p2.findAll { it -> it in vowels  }
+   println part2.size()
